@@ -1,0 +1,164 @@
+{
+	"version": 1,
+	"named_parameters": true,
+	"general": {
+		"title": "MOSuite - plot 3D PCA",
+		"instructions": "Create interactive 3D PCA plots to visualize sample relationships and clustering patterns"
+	},
+	"datasets": [
+		{
+			"id": "82dccbec-cdd6-4d7f-a610-9cea832e4a8f",
+			"name": "multiOmicDataSet"
+		}
+	],
+	"categories": [
+		{
+			"id": "7Rr6IxOMDucKMImp",
+			"name": "Input data parameters",
+			"icon": "📂"
+		},
+		{
+			"id": "EzTg1ivlFDHEy9PI",
+			"name": "PCA Settings",
+			"icon": "📂"
+		},
+		{
+			"id": "FvI4Z2eb9sjL47Jt",
+			"name": "Plot Styling",
+			"icon": "📂"
+		}
+	],
+	"parameters": [
+		{
+			"id": "ZvGNzbTfFDAiJ8Lv",
+			"category": "7Rr6IxOMDucKMImp",
+			"name": "multiOmicDataSet file pattern",
+			"param_name": "regex_moo",
+			"description": "Regex pattern used to locate the multiOmicDataSet .rds file",
+			"type": "text",
+			"value_type": "string",
+			"default_value": ".*\\\\.rds$"
+		},
+		{
+			"id": "count_type_id",
+			"category": "7Rr6IxOMDucKMImp",
+			"name": "Count type",
+			"param_name": "count_type",
+			"description": "Type of counts to use (e.g., filt, norm)",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "filt"
+		},
+		{
+			"id": "sub_count_type_id",
+			"category": "7Rr6IxOMDucKMImp",
+			"name": "Sub count type",
+			"param_name": "sub_count_type",
+			"description": "Sub count type if count_type is a list",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "feature_id_colname_id",
+			"category": "7Rr6IxOMDucKMImp",
+			"name": "Feature ID column name",
+			"param_name": "feature_id_colname",
+			"description": "Column name for feature IDs",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "sample_id_colname_id",
+			"category": "7Rr6IxOMDucKMImp",
+			"name": "Sample ID column name",
+			"param_name": "sample_id_colname",
+			"description": "Column name for sample IDs",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "samples_to_rename_id",
+			"category": "7Rr6IxOMDucKMImp",
+			"name": "Samples to rename",
+			"param_name": "samples_to_rename",
+			"description": "Samples to rename in format old:new,old2:new2",
+			"type": "text",
+			"value_type": "string"
+		},
+		{
+			"id": "group_colname_id",
+			"category": "7Rr6IxOMDucKMImp",
+			"name": "Group column name",
+			"param_name": "group_colname",
+			"description": "Column name for sample groups",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "Group"
+		},
+		{
+			"id": "label_colname_id",
+			"category": "7Rr6IxOMDucKMImp",
+			"name": "Label column name",
+			"param_name": "label_colname",
+			"description": "Column name for sample labels",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "Label"
+		},
+		{
+			"id": "principal_components_id",
+			"category": "EzTg1ivlFDHEy9PI",
+			"name": "Principal components",
+			"param_name": "principal_components",
+			"description": "Principal components to plot (comma-separated, e.g., 1,2,3)",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "1,2,3"
+		},
+		{
+			"id": "point_size_id",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Point size",
+			"param_name": "point_size",
+			"description": "Size of points in plot",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "8"
+		},
+		{
+			"id": "label_font_size_id",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Label font size",
+			"param_name": "label_font_size",
+			"description": "Font size for labels",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "24"
+		},
+		{
+			"id": "color_values_id",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Color values",
+			"param_name": "color_values",
+			"description": "Comma-separated color values for groups",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "#5954d6,#e1562c,#b80058,#00c6f8,#d163e6,#00a76c,#ff9287,#008cf9,#006e00,#796880,#FFA500,#878500"
+		},
+		{
+			"id": "plot_title_id",
+			"category": "FvI4Z2eb9sjL47Jt",
+			"name": "Plot title",
+			"param_name": "plot_title",
+			"description": "Title for the plot",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "PCA 3D"
+		}
+	],
+	"results": [
+		{
+			"file_name": "figures/pca/pca_3D.html"
+		}
+	]
+}

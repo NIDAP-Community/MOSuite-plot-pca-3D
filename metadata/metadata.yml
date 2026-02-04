@@ -1,0 +1,11 @@
+metadata_version: 1
+name: MOSuite - plot 3D PCA
+description: |-
+  Create interactive 3D PCA plots to visualize sample relationships and clustering patterns.
+
+  Multi-Omics Suite provides a suite of functions to clean, filter, batch-correct, normalize, visualize, and perform differential expression analysis. While the package is designed for differential RNA-seq analysis and multi-omics datasets, it can be used for any data represented in a counts table. See the website for more information, documentation, and examples: https://ccbr.github.io/MOSuite/
+tags:
+- MOSuite
+- Bulk RNA-seq
+- visualization
+- PCA
