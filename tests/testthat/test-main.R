@@ -48,6 +48,15 @@ test_that("3D PCA capsule keeps expected PCA parameter contract", {
   expect_equal(extract_panel_default(panel_lines, "plot_title"), "PCA 3D")
 })
 
+test_that("3D PCA names colors by group before plotting", {
+  main_text <- paste(read_repo_file("code", "main.R"), collapse = "\n")
+
+  expect_match(main_text, "group_values <- sort\\(unique\\(as.character")
+  expect_match(main_text, "stats::setNames")
+  expect_match(main_text, "color_values\\[seq_along\\(group_values\\)\\]")
+  expect_match(main_text, "color_values = color_values")
+})
+
 test_that("run wrapper prepares result directories and forwards CLI arguments", {
   run_lines <- read_repo_file("code", "run")
   run_text <- paste(run_lines, collapse = "\n")
