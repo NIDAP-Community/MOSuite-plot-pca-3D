@@ -85,18 +85,6 @@ args <- parser$parse_args()
 
 # load multiOmicDataSet from data directory
 moo <- load_moo_from_data_dir()
-color_values <- parse_optional_vector(args$color_values)
-if (args$group_colname %in% colnames(moo@sample_meta)) {
-  group_values <- sort(unique(as.character(
-    moo@sample_meta[[args$group_colname]]
-  )))
-  if (length(group_values) <= length(color_values)) {
-    color_values <- stats::setNames(
-      color_values[seq_along(group_values)],
-      group_values
-    )
-  }
-}
 
 # run MOSuite
 plot_pca(
@@ -113,6 +101,6 @@ plot_pca(
   label_colname = args$label_colname,
   point_size = args$point_size,
   label_font_size = args$label_font_size,
-  color_values = color_values,
+  color_values = parse_optional_vector(args$color_values),
   plot_title = args$plot_title
 )

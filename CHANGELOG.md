@@ -2,7 +2,6 @@
 
 ## Development version
 
-- Fixed the 3D PCA capsule color mapping so group colors match the 2D PCA plot (#1, @phoman14).
 - Added tests for the plot pca 3D capsule Code Ocean panel and CLI contract (#1, @phoman14).
 - Improved the Code Ocean parameter UI for the plot pca 3D capsule (#1, @phoman14).
 
