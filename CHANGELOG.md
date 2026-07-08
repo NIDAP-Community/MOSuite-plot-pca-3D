@@ -1,5 +1,9 @@
 # Code Ocean capsule - MOSuite - plot 3D PCA
 
+## Development version
+
+- Improved the Code Ocean parameter UI for the plot pca 3D capsule (#1, @phoman14).
+
 ## v2.0
 
 - Use MOSuite v0.3.0.
