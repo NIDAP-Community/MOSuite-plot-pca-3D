@@ -6,6 +6,7 @@
 - Document that color palettes fall back to random colors only when too few colors are provided (#2, @phoman14).
 - Added tests for the plot pca 3D capsule Code Ocean panel and CLI contract (#1, @phoman14).
 - Improved the Code Ocean parameter UI for the plot pca 3D capsule (#1, @phoman14).
+- Use MOSuite v0.3.2. (#3, @kelly-sovacool)
 
 ## v2.0
 
