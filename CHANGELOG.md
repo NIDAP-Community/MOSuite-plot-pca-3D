@@ -2,7 +2,7 @@
 
 ## Development version
 
-- Sync Code Ocean app panel parameter descriptions with MOSuite package documentation (#7, @phoman14).
+- Sync Code Ocean app panel parameter descriptions with MOSuite package documentation for MOSuite v0.4.1 (#7, @phoman14).
 - Align the PCA color and point size defaults with MOSuite package defaults (#2, @phoman14).
 - Document that color palettes fall back to random colors only when too few colors are provided (#2, @phoman14).
 - Added tests for the plot pca 3D capsule Code Ocean panel and CLI contract (#1, @phoman14).
