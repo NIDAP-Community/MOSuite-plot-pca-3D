@@ -12,13 +12,17 @@ test_that("Code Ocean panel uses named parameters accepted by main.R", {
     main_args,
     info = "Every app-panel param_name should match a main.R CLI argument"
   )
+  expect_false("sub_count_type" %in% main_args)
+  expect_false("sub_count_type" %in% panel_args)
 })
 
 test_that("3D PCA capsule keeps expected PCA parameter defaults", {
   main_lines <- read_repo_file("code", "main.R")
   panel_lines <- read_repo_file(".codeocean", "app-panel.json")
+  main_text <- paste(main_lines, collapse = "\n")
 
-  expect_match(paste(main_lines, collapse = "\n"), "plot_pca\\(")
+  expect_match(main_text, "plot_pca\\(")
+  expect_match(main_text, 'if \\(identical\\(args\\$count_type, "norm"\\)\\) "voom" else NULL')
   expect_equal(
     extract_panel_default(panel_lines, "principal_components"),
     "1,2,3"

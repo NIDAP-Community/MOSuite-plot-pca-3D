@@ -70,15 +70,6 @@
 			"default_value": "Label"
 		},
 		{
-			"id": "sub_count_type_id",
-			"category": "7Rr6IxOMDucKMImp",
-			"name": "Sub count type",
-			"param_name": "sub_count_type",
-			"description": "Used if count_type is a list in the counts slot. Specify the sub count type within the list.",
-			"type": "text",
-			"value_type": "string"
-		},
-		{
 			"id": "sample_id_colname_id",
 			"category": "EzTg1ivlFDHEy9PI",
 			"name": "Sample ID column name",
