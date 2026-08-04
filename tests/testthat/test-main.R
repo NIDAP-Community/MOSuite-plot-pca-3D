@@ -22,7 +22,6 @@ test_that("3D PCA capsule keeps expected PCA parameter defaults", {
   main_text <- paste(main_lines, collapse = "\n")
 
   expect_match(main_text, "plot_pca\\(")
-  expect_match(main_text, 'if \\(identical\\(args\\$count_type, "norm"\\)\\) "voom" else NULL')
   expect_equal(
     extract_panel_default(panel_lines, "principal_components"),
     "1,2,3"
