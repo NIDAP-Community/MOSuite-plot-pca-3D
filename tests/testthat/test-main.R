@@ -32,6 +32,12 @@ test_that("3D PCA capsule keeps expected PCA parameter defaults", {
   expect_equal(extract_panel_default(panel_lines, "plot_title"), "PCA 3D")
 })
 
+test_that("main.R CLI plots supported count types", {
+  for (count_type in c("raw", "filt", "norm", "batch")) {
+    expect_main_runs_with_count_type(count_type)
+  }
+})
+
 test_that("run wrapper prepares result directories and forwards CLI arguments", {
   run_lines <- read_repo_file("code", "run")
   run_text <- paste(run_lines, collapse = "\n")
