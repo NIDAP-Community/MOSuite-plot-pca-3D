@@ -15,12 +15,6 @@ parser <- ArgumentParser()
 
 parser$add_argument("--count_type", type = "character", default = "filt")
 parser$add_argument(
-  "--sub_count_type",
-  type = "character",
-  default = NULL,
-  help = "Sub count type if count_type is a list"
-)
-parser$add_argument(
   "--feature_id_colname",
   type = "character",
   default = NULL,
@@ -82,6 +76,7 @@ parser$add_argument(
 )
 
 args <- parser$parse_args()
+sub_count_type <- if (identical(args$count_type, "norm")) "voom" else NULL
 
 # load multiOmicDataSet from data directory
 moo <- load_moo_from_data_dir()
@@ -90,7 +85,7 @@ moo <- load_moo_from_data_dir()
 plot_pca(
   moo,
   count_type = args$count_type,
-  sub_count_type = args$sub_count_type,
+  sub_count_type = sub_count_type,
   principal_components = as.integer(parse_optional_vector(
     args$principal_components
   )),
