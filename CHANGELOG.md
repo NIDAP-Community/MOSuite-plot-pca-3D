@@ -2,6 +2,8 @@
 
 ## Development version
 
+- Use MOSuite v0.5.0 (#12, @kelly-sovacool)
+
 ## v4.0
 
 - Hide the count subtype parameter and automatically use the `voom` subtype when plotting normalized counts (#11, @phoman14).
